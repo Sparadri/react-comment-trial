@@ -7,6 +7,7 @@ JsRoutes.setup do |config|
   config.include = [
     /^upvote_comment$/,
     /^comment$/,
-    /^create_comment$/
+    /^create_comment$/,
+    /^update_list$/
   ]
 end

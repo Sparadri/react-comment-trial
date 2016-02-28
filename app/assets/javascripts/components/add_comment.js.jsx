@@ -13,6 +13,8 @@ var AddComment = React.createClass({
   },
 
   handleValidation: function() {
+    this.props.addComments(this.state.content);
+
     var that = this
     $.ajax({
       type: "POST",

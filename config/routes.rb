@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'comments#index'
 
   post '/comments', to: 'comments#create', as: 'create_comment'
-
+  post '/updatelist', to: 'comments#index', as: 'update_list'
   resources :comments, only: [:index, :update] do
     member do
       post :upvote

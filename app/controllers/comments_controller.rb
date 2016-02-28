@@ -1,8 +1,9 @@
 class CommentsController < ApplicationController
 
   def index
-    @comments = Comment.all
     @comment = Comment.new
+    @comments = Comment.all
+    @user = current_user
   end
 
   def upvote
@@ -20,7 +21,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @comment.user = current_user
     @comment.save
-    @comment
+
     render :index
   end
 
